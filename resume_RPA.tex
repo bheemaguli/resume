@@ -1,0 +1,237 @@
+%-------------------------
+% Resume in Latex
+% Author : Sumanth Kashyap
+% Based off of: Jake Gutierrez version of https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{multicol}
+\usepackage{transparent}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength\multicolsep{0pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% @ font change
+\protected\def\myfavoriteat{%
+  {\fontfamily{ptm}\selectfont @}%
+}
+\begingroup\lccode`~=`@ \lowercase{\endgroup\let~}\myfavoriteat
+\catcode`@=\active
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{-2pt}\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape 
+    \href{https://github.com/bheemaguli/resume}{Sumanth Kashyap{\tiny \faLink}}} \\ 
+    \vspace{1pt}
+    \faMapMarker \hspace{0.2mm} Bengaluru $|$ 
+    \faLinkedinSquare \hspace{0.2mm} \href{https://www.linkedin.com/in/asdf1234/}{LinkedIn} $|$
+    \faGithub    \hspace{0.2mm} \href{https://github.com/bheemaguli/}{GitHub}
+\end{center}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{PO Data Extract and Report Generate} $|$ \emph{UiPath, VB.Net, Regex, Python}}{Nov 2021 -- Jan 2022}
+           \begin{itemize}[leftmargin=0.15in, label={}]
+            \vspace{0.8pt}\small{\item{
+                 \textbf{Client}{: {\bfseries{Tata Consumer Products}}} \\
+                 \textbf{Aim}{: {\bfseries{Extract product details from PO and Generate Report}}}\\
+                      \resumeItemListStart
+                        \resumeItem{Download mail attachment with specific subject for the Master (SAP Table in Excel form). Download all POs mentioned in the Master from mail inbox.}
+                        \resumeItem{Extract product data of table from PDFs (table configuration varies from customer to customer) and filter data with vb.net and regex in UiPath.}
+                        \resumeItem{Generate an Excel report with python using extraction data.}
+                        \resumeItem{BOT configured to e-mail the Report Excel after completion.}
+                      \resumeItemListEnd
+                \textbf{Outcome}{: {\bfseries{Process 40k products a week with 90\% efficiency and reduced 8 member equivalent manual labor cost}}.}\\
+                    }}
+             \end{itemize}
+             \vspace{-6pt}
+      \resumeProjectHeading
+          {\textbf{Commodity Upload} $|$ \emph{UiPath, VB.Net, Regex, Python}}{Feb 2022 -- Apr 2022}
+           \begin{itemize}[leftmargin=0.15in, label={}]
+                \vspace{0.8pt}\small{\item{
+                    \textbf{Client}{: {\bfseries{Dubai based Large Commodity Trading Company}}} \\
+                    \textbf{Aim}{: {\bfseries{Get input commodity curves, process file according to the database, upload to a website}}}\\
+                        \resumeItemListStart
+                            \resumeItem{Prepare input file with vb.net in UiPath.}
+                            \resumeItem{Ask the user whether the database needs to be updated with GUI made with Python and Tkinter.}
+                            \resumeItem{Process setup to process input files with database sata after database update.}
+                            \resumeItem{Upload files to the website with UiPath. Multiple UI element is used as anchors for clicking and uploading.}
+                            \resumeItem{Added error handling, retry scope and process to cleanup files incase of error during process.}
+                        \resumeItemListEnd
+                    \textbf{Outcome}{: {\bfseries{Reduced manpower wastage on repetitive manual tasks}}.}\\
+                }}
+                \end{itemize}
+    \resumeSubHeadingListEnd
+    \vspace{-12pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lead RPA Developer}{Sep 2021 -- Present}
+      {Vanward Info. Tech.}{Bengaluru, KA}
+      \resumeItemListStart
+        \resumeItem{Developed 4 end-to-end RPA bots to automate processes}
+        \resumeItem{Saved 20 employee equivalent manpower to the customer}
+        \resumeItem{Wrote 8+ Python scripts and 20+ vb.Net scripts to process documents during the RPA process}
+        \resumeItem{Wrote 5 Python executables(.exe) with GUI(tkinter) to be invoked by the bot for human interaction in the process loop}
+    \resumeItemListEnd
+    \vspace{-4pt}
+    \resumeSubheading
+      {Image Processing Intern}{Jun 2020 -- Aug 2020}
+      {Ximax Solutions}{Bengaluru, KA}
+      \resumeItemListStart
+        \resumeItem{Developed Image Processing algorithms using MATLAB to understand and implement Video‐based license plate reader, Motion Tracking, Shape Recovery on Low Quality or Missing Images, Drowsiness Detection, Image compression using Wavelets, OFDM modulation, and Demodulation.}
+        \resumeItem{Implemented Hough Transform-based algorithm to assist the detection of pole star position in a star trail photography.}
+    \resumeItemListEnd
+    \vspace{-4pt}
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Dayananda Sagar Academy of Tech. and Mgmt.}{Bengaluru, KA}
+      {Bachelor of Electrical and Electronics Engineering - CGPA: 8.58}{Jul 2017 -- Jul 2021}
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: {\bfseries{Python}}, 
+                          {\transparent{0.75}SQL}, 
+                          {\transparent{0.75}vb.NET}} \\
+     \textbf{Libraries}{: {\bfseries{Regex}}, 
+                          {\bfseries{Pandas}}, 
+                          {\bfseries{NumPy}},
+                          {\bfseries{Matplotlib - Seaborn}},
+                          {\bfseries{Scikit-learn}}}\\
+     \textbf{Frameworks}{: {\bfseries{Flask}},
+                          {\transparent{0.75}Bootstrap},
+                          {\transparent{0.75}Django}} \\
+     \textbf{Developer Tools}{: 
+                          {\bfseries{Git}},
+                          {\bfseries{VS Code}},
+                          {\bfseries{UiPath}}, 
+                          {\transparent{0.75}Docker}} \\
+    }}
+ \end{itemize}
+\vspace{-10pt}
+
+%-----------Certification Courses-----------
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+
+\begin{tabularx}{\linewidth}{ @{} X X X @{} }
+    \href{https://drive.google.com/file/d/12vi-lAJhrCxxB-xRyPDWlyEFBEikqivv/view?usp=sharing}
+    {\bfseries{RPA Developer Foundation {\tiny \faLink}}}\hfill \break
+    UiPath\hfill \break
+    {\textit{Oct, 2021}}
+    
+    & 
+    
+    \href{https://ineuron.ai/course/Full-Stack-Data-Science-Nov'21-Batch}
+    {\bfseries{Full Stack - Data Science {\tiny \faLink}}}\hfill \break
+    iNeuron.ai\hfill \break
+    {\textit{Nov, 2021 -- Present}}
+
+    &
+    
+    \href{https://drive.google.com/file/d/1nlAGjIDLMqbXyDVl-Py22eLMO2MyzlGz/view?usp=sharing}
+    {\bfseries{Deep Learning Specialization {\tiny \faLink}}}\hfill \break
+    deeplearning.ai\hfill \break
+    {\textit{In Progress, Completed 4/5}}
+\end{tabularx}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}

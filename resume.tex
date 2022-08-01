@@ -1,0 +1,221 @@
+%-------------------------
+% Resume in Latex
+% Author : Sumanth Kashyap
+% Based off of: Jake Gutierrez version of https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{multicol}
+\usepackage{transparent}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength\multicolsep{0pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% @ font change
+\protected\def\myfavoriteat{%
+  {\fontfamily{ptm}\selectfont @}%
+}
+\begingroup\lccode`~=`@ \lowercase{\endgroup\let~}\myfavoriteat
+\catcode`@=\active
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape 
+    \href{https://github.com/bheemaguli/resume}{Sumanth Kashyap{\tiny \faLink}}} \\ 
+    \vspace{1pt}
+    \faMapMarker \hspace{0.2mm} Bengaluru $|$ 
+    \faPhone     \hspace{0.2mm} \href{tel:+91-00000-00000}{00000-00000} $|$ 
+    \faEnvelope  \hspace{0.2mm} \href{mailto:sample@gmail.com}{sample@gmail.com} $|$ 
+    \faLinkedinSquare \hspace{0.2mm} \href{https://www.linkedin.com/in/asdf1234/}{LinkedIn} $|$
+    \faGithub    \hspace{0.2mm} \href{https://github.com/bheemaguli/}{GitHub}
+\end{center}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{System Info Extraction} $|$ \emph{Python, Mysql, Django}}{May 2022 -- Jul 2022}
+          \resumeItemListStart
+            \resumeItem{Use Python's {\bfseries{winreg}}, {\bfseries{subprocess}}, {\bfseries{win32}} and many more libraries to get system details. Use {\bfseries{subprocess}} to run PowerShell scripts and capture {\bfseries{stdout}} to a variable and extract necessary data with {\bfseries{regex}}. Used {\bfseries{ipify API}} to get system location.}
+            \resumeItem{Developed {\bfseries{custom logging}} to save logs to database. Used {\bfseries{MySQL connector}} to upload captured data and process logs to two different tables connected with a foreign key.}
+            \resumeItem{Converted the Python project to EXE with {\bfseries{Pyinstaller}}.}
+            \resumeItem{Developed {\bfseries{Django + tailwind}} page with user authentication to access the database.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/bheemaguli/House-Price-Prediction}{House Price Prediction {\tiny \faLink}}} $|$ \emph{Python, Flask, Heroku, Docker}}{Jun 2022 -- Jul 2022}
+          \resumeItemListStart
+            \resumeItem{Recreated and implemented end-to-end process for California House Price Prediction with {\bfseries{Python}}, {\bfseries{Flask}} and {\bfseries{Heroku}}.}
+            \resumeItem{Developed {\bfseries{custom logging}} module to track the logs and errors during execution.}
+            \resumeItem{Performed {\bfseries{EDA}} to understand the data and analysed {\bfseries{data drift}} report to prevent degradation of model performance.}
+            \resumeItem{Converted dataset to a usable format and prepared data, fit for training process with help of {\bfseries{scikit-learn tools}}.}
+            \resumeItem{Compared performance of {\bfseries{Linear Regression}} and {\bfseries{Random forest regression}} algorithm output for optimal performance.}
+            \resumeItem{\href{https://house-price-prediction-bhem.herokuapp.com/}{Deployed to Heroku on a docker container {\tiny \faLink}}.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Lead RPA Developer $|$ {\transparent{0.75}Python Automation Developer}}{Sep 2021 -- Present}
+      {Vanward Info. Tech.}{Bengaluru, KA}
+      \resumeItemListStart
+        \resumeItem{Developed 4 end-to-end RPA bots to automate processes}
+        \resumeItem{Saved 30 employee equivalent manpower to the customer}
+        \resumeItem{Wrote 8+ Python scripts and 20+ vb.Net scripts to process documents during the RPA process}
+        \resumeItem{Wrote 5 Python executables(.exe) with GUI(tkinter) to be invoked by the bot for human interaction in the process loop}
+    \resumeItemListEnd
+    \resumeSubheading
+      {Image Processing Intern}{Jun 2020 -- Aug 2020}
+      {Ximax Solutions}{Bengaluru, KA}
+      \resumeItemListStart
+        \resumeItem{Developed Image Processing algorithms using MATLAB to understand and implement Video‐based license plate reader, Motion Tracking, Shape Recovery on Low Quality or Missing Images, Drowsiness Detection, Image compression using Wavelets, OFDM modulation, and Demodulation.}
+        \resumeItem{Implemented Hough Transform-based algorithm to assist the detection of pole star position in a star trail photography.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Dayananda Sagar Academy of Tech. and Mgmt.}{Bengaluru, KA}
+      {Bachelor of Electrical and Electronics Engineering - CGPA: 8.58}{Jul 2017 -- Jul 2021}
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: {\bfseries{Python}}, 
+                          {\transparent{0.75}SQL}, 
+                          {\transparent{0.75}vb.NET}} \\
+     \textbf{Libraries}{: {\bfseries{Pandas}}, 
+                          {\bfseries{NumPy}},
+                          {\bfseries{Matplotlib - Seaborn}},
+                          {\bfseries{Scikit-learn}}}\\
+     \textbf{Frameworks}{: {\bfseries{Flask}},
+                          {\transparent{0.75}Bootstrap},
+                          {\transparent{0.75}Django}} \\
+     \textbf{Developer Tools}{: 
+                          {\bfseries{Git}},
+                          {\bfseries{VS Code}},
+                          {\bfseries{UiPath}}, 
+                          {\transparent{0.75}Docker}} \\
+    }}
+ \end{itemize}
+
+%-----------Certification Courses-----------
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+
+\begin{tabularx}{\linewidth}{ @{} X X X @{} }
+    \href{https://ineuron.ai/course/Full-Stack-Data-Science-Nov'21-Batch}
+    {\bfseries{Full Stack - Data Science}}\hfill \break
+    iNeuron.ai\hfill \break
+    {\textit{Nov, 2021 -- Present}}
+
+    &
+    
+    \href{https://drive.google.com/file/d/1nlAGjIDLMqbXyDVl-Py22eLMO2MyzlGz/view?usp=sharing}
+    {\bfseries{Deep Learning Specialization}}\hfill \break
+    deeplearning.ai\hfill \break
+    {\textit{Completed 4/5}}
+
+    &
+    
+    \href{https://www.coursera.org/learn/machine-learning}
+    {\bfseries{Machine Learning}}\hfill \break
+    Coursera
+\end{tabularx}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
