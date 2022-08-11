@@ -3,7 +3,7 @@ Personal updated resume can be found in this repo.
 
 # Projects in progress:
 ### - [**Mice Protein Expression**](https://github.com/bheemaguli/Mice-Protein-Expression)
-### - [**Image Captioning**](https://github.com/bheemaguli/Image-Captioning)
+<!-- ### - [**Image Captioning**](https://github.com/bheemaguli/Image-Captioning) -->
 
 <br>
 

@@ -21,6 +21,7 @@
 \usepackage{fontawesome}
 \usepackage{multicol}
 \usepackage{transparent}
+\usepackage{changepage}
 \input{glyphtounicode}
 
 
@@ -121,22 +122,26 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{System Info Extraction} $|$ \emph{Python, Mysql, Django}}{May 2022 -- Jul 2022}
+          {\textbf{\href{https://github.com/bheemaguli/House-Price-Prediction}{House Price Prediction (with REST API) {\tiny \faLink}}} $|$ \emph{Python, Flask, Heroku, Docker}}{Jun 2022 -- Present}
           \resumeItemListStart
-            \resumeItem{Use Python's {\bfseries{winreg}}, {\bfseries{subprocess}}, {\bfseries{win32}} and many more libraries to get system details. Use {\bfseries{subprocess}} to run PowerShell scripts and capture {\bfseries{stdout}} to a variable and extract necessary data with {\bfseries{regex}}. Used {\bfseries{ipify API}} to get system location.}
+            \resumeItem{Implemented end-to-end process for California House Price Prediction with {\bfseries{Python}}, {\bfseries{Flask}} and {\bfseries{Heroku}}.}
+            \resumeItem{Developed {\bfseries{custom logging}} module to track the logs and errors during execution.}
+            \resumeItem{Under {\bfseries{EDA}}, performed {\bfseries{ANOVA}} to understand the correlation of values and analysed {\bfseries{data drift}} report to prevent degradation of model performance.}
+            \resumeItem{Converted dataset to a usable format and prepared data, fit for training process with help of {\bfseries{scikit-learn tools}}.}
+            \resumeItem{Compared performance of {\bfseries{Linear Regression}} and {\bfseries{Random forest regression}} algorithm output for optimal performance. Used {\bfseries{GridSearchCV}} to get best hyperparameters for the models.}
+            \resumeItem{\href{https://house-price-prediction-bhem.herokuapp.com/}{Deployed the Flask app to Heroku on a docker container {\tiny \faLink}}.}
+            \resumeItem{\href{https://house-price-prediction-bhem.herokuapp.com/docs/api}{Implemented REST API to access prediction model {\tiny \faLink}}.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{System Info Extraction} $|$ \emph{Python, Mysql, Django}}{May 2022 -- Present}
+          \resumeItemListStart
+            \vspace{4pt}
+            \begin{adjustwidth*}{-0.5cm}{-0.5cm}{Client: Dubai based Large Commodity Trading Company}\vspace{-2pt}\end{adjustwidth*}
+            \resumeItem{Use Python's {\bfseries{winreg}}, {\bfseries{subprocess}}, {\bfseries{win32}} and many more libraries to get system details.}
+            \resumeItem{Use {\bfseries{subprocess}} to run PowerShell scripts and capture {\bfseries{stdout}} to a variable and extract necessary data with {\bfseries{regex}}. Used {\bfseries{ipify API}} to get system location.}
             \resumeItem{Developed {\bfseries{custom logging}} to save logs to database. Used {\bfseries{MySQL connector}} to upload captured data and process logs to two different tables connected with a foreign key.}
             \resumeItem{Converted the Python project to EXE with {\bfseries{Pyinstaller}}.}
             \resumeItem{Developed {\bfseries{Django + tailwind}} page with user authentication to access the database.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{\href{https://github.com/bheemaguli/House-Price-Prediction}{House Price Prediction {\tiny \faLink}}} $|$ \emph{Python, Flask, Heroku, Docker}}{Jun 2022 -- Jul 2022}
-          \resumeItemListStart
-            \resumeItem{Recreated and implemented end-to-end process for California House Price Prediction with {\bfseries{Python}}, {\bfseries{Flask}} and {\bfseries{Heroku}}.}
-            \resumeItem{Developed {\bfseries{custom logging}} module to track the logs and errors during execution.}
-            \resumeItem{Performed {\bfseries{EDA}} to understand the data and analysed {\bfseries{data drift}} report to prevent degradation of model performance.}
-            \resumeItem{Converted dataset to a usable format and prepared data, fit for training process with help of {\bfseries{scikit-learn tools}}.}
-            \resumeItem{Compared performance of {\bfseries{Linear Regression}} and {\bfseries{Random forest regression}} algorithm output for optimal performance.}
-            \resumeItem{\href{https://house-price-prediction-bhem.herokuapp.com/}{Deployed to Heroku on a docker container {\tiny \faLink}}.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -151,7 +156,7 @@
         \resumeItem{Developed 4 end-to-end RPA bots to automate processes}
         \resumeItem{Saved 30 employee equivalent manpower to the customer}
         \resumeItem{Wrote 8+ Python scripts and 20+ vb.Net scripts to process documents during the RPA process}
-        \resumeItem{Wrote 5 Python executables(.exe) with GUI(tkinter) to be invoked by the bot for human interaction in the process loop}
+        \resumeItem{Wrote 5 Python executables(.exe) with GUI(tkinter). This will be invoked by the bot for for human interaction. The user gives the input and the values is integrated to the process loop}
     \resumeItemListEnd
     \resumeSubheading
       {Image Processing Intern}{Jun 2020 -- Aug 2020}
