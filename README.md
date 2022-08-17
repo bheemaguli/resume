@@ -48,11 +48,6 @@ Process:
 
 Outcome: Reduced manpower wastage on repetitive manual tasks.
 
-\resumeItem{Prepare input file with vb.net in UiPath.}
-\resumeItem{Ask the user whether the database needs to be updated with GUI made with Python and Tkinter.}
-\resumeItem{After database update, process input files with database data.}
-\resumeItem{Upload files to the website with UiPath.}
-\resumeItem{Outcome: Reduced manpower wastage on repetitive manual tasks.}
 </details>
 
 <br>
