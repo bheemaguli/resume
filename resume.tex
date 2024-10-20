@@ -5,20 +5,20 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper, 11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames, dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage{multicol}
 \usepackage{transparent}
 \usepackage{changepage}
@@ -42,186 +42,136 @@
 
 \raggedbottom
 \raggedright
-\setlength{\tabcolsep}{0in}
-\setlength\multicolsep{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\multicolsep}{0pt}
 
 % Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{ \vspace{-4pt}\scshape\raggedright\large }{}{0em}{}[
+\titlerule
+\vspace{-5pt}
+]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+\newcommand{\resumeItem}[1]{ \item\small{ {#1 \vspace{-2pt}} } }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+\vspace{-2pt}
+\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+	\textbf{#1}       & #2                 \\
+	\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}
+\vspace{-7pt}
 }
 
 % @ font change
 \protected\def\myfavoriteat{%
-  {\fontfamily{ptm}\selectfont @}%
+{\fontfamily{ptm}\selectfont @}%
 }
-\begingroup\lccode`~=`@ \lowercase{\endgroup\let~}\myfavoriteat
+\begingroup\lccode`~=`@
+\lowercase{\endgroup\let~}\myfavoriteat
 \catcode`@=\active
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+\newcommand{\resumeSubSubheading}[2]{ \item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+	\textit{\small#1} & \textit{\small #2} \\
+\end{tabular*}
+\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+\newcommand{\resumeProjectHeading}[2]{ \item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+	\small#1 & #2 \\
+\end{tabular*}
+\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}
+\vspace{-4pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}
+\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
+	%----------HEADING----------
+	\begin{center}
+		\textbf{\Huge \scshape
+		\href{https://bheemaguli.dev/}{Sumanth Kashyap{\tiny\textcolor{blue}{\faLink}}}}
+		\\
+		\vspace{1pt}
+		\faMapMarker \hspace{0.2mm} Bengaluru \faPhone \hspace{0.2mm} $|$
+		\href{tel:+91-9482171096}{94821-71096} \faEnvelope \hspace{0.2mm} $|$
+		\href{mailto:sumanth@bheemaguli.dev}{sumanth@bheemaguli.dev} \faLinkedin\hspace{0.2mm}
+		$|$ \href{https://www.linkedin.com/in/bheemaguli/}{LinkedIn} \faGithub \hspace{0.2mm}
+		$|$ \href{https://github.com/bheemaguli/}{GitHub}
+	\end{center}
 
-%----------HEADING----------
-\begin{center}
-    \textbf{\Huge \scshape 
-    \href{https://github.com/bheemaguli/resume}{Sumanth Kashyap{\tiny\color{blue}\faLink}}} \\ 
-    \vspace{1pt}
-    \faMapMarker \hspace{0.2mm} Bengaluru $|$ 
-    \faPhone     \hspace{0.2mm} \href{tel:+91-00000-00000}{00000-00000} $|$ 
-    \faEnvelope  \hspace{0.2mm} \href{mailto:sample@gmail.com}{sample@gmail.com} $|$ 
-    \faLinkedinSquare \hspace{0.2mm} \href{https://www.linkedin.com/in/asdf1234/}{LinkedIn} $|$
-    \faGithub    \hspace{0.2mm} \href{https://github.com/bheemaguli/}{GitHub}
-\end{center}
+	%-----------EXPERIENCE-----------
+	\section{Experience}
+	\resumeSubHeadingListStart
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
+	\resumeSubheading {Lead RPA Developer $|$ {\transparent{0.75}Python Automation Developer}}{Sep 2021 -- Present}
+	{Vanward Info. Tech.}{Bengaluru, KA} \resumeItemListStart \resumeItem{Developed 4 end-to-end RPA bots to automate processes}
+	\resumeItem{Saved 30 employee equivalent manpower to the customer} \resumeItem{Wrote 8+ Python scripts and 20+ vb.Net scripts to process documents during the RPA process}
+	\resumeItem{Wrote 5 Python executables(.exe) with GUI(tkinter). This will be invoked by the bot for for human interaction. The user gives the input and the values is integrated to the process loop}
+	\resumeItemListEnd \resumeSubheading {Image Processing Intern}{Jun 2020 -- Aug 2020}
+	{Ximax Solutions}{Bengaluru, KA} \resumeItemListStart \resumeItem{Developed Image Processing algorithms using MATLAB to understand and implement Video‐based license plate reader, Motion Tracking, Shape Recovery on Low Quality or Missing Images, Drowsiness Detection, Image compression using Wavelets, OFDM modulation, and Demodulation.}
+	\resumeItem{Implemented Hough Transform-based algorithm to assist the detection of pole star position in a star trail photography.}
+	\resumeItemListEnd \resumeSubHeadingListEnd
 
-    \resumeSubheading
-      {Lead RPA Developer $|$ {\transparent{0.75}Python Automation Developer}}{Sep 2021 -- Present}
-      {Vanward Info. Tech.}{Bengaluru, KA}
-      \resumeItemListStart
-        \resumeItem{Developed 4 end-to-end RPA bots to automate processes}
-        \resumeItem{Saved 30 employee equivalent manpower to the customer}
-        \resumeItem{Wrote 8+ Python scripts and 20+ vb.Net scripts to process documents during the RPA process}
-        \resumeItem{Wrote 5 Python executables(.exe) with GUI(tkinter). This will be invoked by the bot for for human interaction. The user gives the input and the values is integrated to the process loop}
-    \resumeItemListEnd
-    \resumeSubheading
-      {Image Processing Intern}{Jun 2020 -- Aug 2020}
-      {Ximax Solutions}{Bengaluru, KA}
-      \resumeItemListStart
-        \resumeItem{Developed Image Processing algorithms using MATLAB to understand and implement Video‐based license plate reader, Motion Tracking, Shape Recovery on Low Quality or Missing Images, Drowsiness Detection, Image compression using Wavelets, OFDM modulation, and Demodulation.}
-        \resumeItem{Implemented Hough Transform-based algorithm to assist the detection of pole star position in a star trail photography.}
-    \resumeItemListEnd
-  \resumeSubHeadingListEnd
+	%-----------PROJECTS-----------
+	\section{Projects}
+	\resumeSubHeadingListStart \resumeProjectHeading
+	{\textbf{\href{https://github.com/bheemaguli/House-Price-Prediction}{House Price Prediction (with REST API) {\tiny \textcolor{blue}{\faLink}}}} $|$ \emph{Python, Flask, Heroku, Docker}}{Jun 2022 -- Present}
+	\resumeItemListStart \resumeItem{Implemented end-to-end process for California House Price Prediction with {\textbf{Python}}, {\textbf{Flask}} and {\textbf{Heroku}}.}
+	\resumeItem{Developed {\textbf{custom logging}} module to track the logs and errors during execution.}
+	\resumeItem{Under {\textbf{EDA}}, used {\textbf{KNNImputer}} to fillout the missing values.}
+	\resumeItem{Generated {\textbf{data drift}} report with {\textbf{evidently}}. Analysed output to prevent degradation of model data.}
+	\resumeItem{Converted dataset to a usable format and prepared data, fit for training process with help of {\textbf{scikit-learn tools}}.}
+	\resumeItem{Compared performance of {\textbf{Linear Regression}} and {\textbf{Random forest regression}} algorithm output for optimal performance. Used {\textbf{GridSearchCV}} to get best hyperparameters for the models.}
+	\resumeItem{Implemented modular style pipeline with {\textbf{OOPs}}. Deployed the Flask app to Heroku on a docker container.}
+	\resumeItem{Implemented {\textbf{REST API}} to access prediction model.} \resumeItemListEnd
+	\resumeProjectHeading {\textbf{System Info Extraction} $|$ \emph{Python, Mysql, Django}}{May 2022 -- Present}
+	\hspace{10px}
+	\vspace{-2px}
+	Client: Dubai based Large Commodity Trading Company \resumeItemListStart
+	\vspace{4pt}
+	\resumeItem{Use Python's {\textbf{winreg}}, {\textbf{subprocess}}, {\textbf{win32}} and many more libraries to get system details.}
+	\resumeItem{Use {\textbf{subprocess}} to run PowerShell scripts and capture {\textbf{stdout}} to a variable.}
+	\resumeItem{Extracted necessary data with {\textbf{regex}}. Used {\textbf{ipify API}} to get system location.}
+	\resumeItem{Developed {\textbf{custom logging}} to save logs to database. Used {\textbf{MySQL connector}} to upload captured data and process logs to two different tables connected with a foreign key.}
+	\resumeItem{Converted the Python project to EXE with {\textbf{Pyinstaller}} that can be executed in any system.}
+	\resumeItem{Developed {\textbf{Django + tailwind}} page with user authentication to access the database for demo purpose.}
+	\resumeItemListEnd \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{\href{https://github.com/bheemaguli/House-Price-Prediction}{House Price Prediction (with REST API) {\tiny \color{blue} \faLink}}} $|$ \emph{Python, Flask, Heroku, Docker}}{Jun 2022 -- Present}
-          \resumeItemListStart
-            \resumeItem{Implemented end-to-end process for California House Price Prediction with {\bfseries{Python}}, {\bfseries{Flask}} and {\bfseries{Heroku}}.}
-            \resumeItem{Developed {\bfseries{custom logging}} module to track the logs and errors during execution.}
-            \resumeItem{Under {\bfseries{EDA}}, used {\bfseries{KNNImputer}} to fillout the missing values.}
-            \resumeItem{Generated {\bfseries{data drift}} report with {\bfseries{evidently}}. Analysed output to prevent degradation of model data.}
-            \resumeItem{Converted dataset to a usable format and prepared data, fit for training process with help of {\bfseries{scikit-learn tools}}.}
-            \resumeItem{Compared performance of {\bfseries{Linear Regression}} and {\bfseries{Random forest regression}} algorithm output for optimal performance. Used {\bfseries{GridSearchCV}} to get best hyperparameters for the models.}
-            \resumeItem{Implemented modular style pipeline with {\bfseries{OOPs}}. Deployed the Flask app to Heroku on a docker container.}
-            \resumeItem{Implemented {\bfseries{REST API}} to access prediction model.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{System Info Extraction} $|$ \emph{Python, Mysql, Django}}{May 2022 -- Present}
-          \resumeItemListStart
-            \vspace{4pt}
-            {\begin{adjustwidth*}{-0.5cm}{-0.5cm}{Client: Dubai based Large Commodity Trading Company}\vspace{-2pt}\end{adjustwidth*}}
-            \resumeItem{Use Python's {\bfseries{winreg}}, {\bfseries{subprocess}}, {\bfseries{win32}} and many more libraries to get system details.}
-            \resumeItem{Use {\bfseries{subprocess}} to run PowerShell scripts and capture {\bfseries{stdout}} to a variable.}
-            \resumeItem{Extracted necessary data with {\bfseries{regex}}. Used {\bfseries{ipify API}} to get system location.}
-            \resumeItem{Developed {\bfseries{custom logging}} to save logs to database. Used {\bfseries{MySQL connector}} to upload captured data and process logs to two different tables connected with a foreign key.}
-            \resumeItem{Converted the Python project to EXE with {\bfseries{Pyinstaller}} that can be executed in any system.}
-            \resumeItem{Developed {\bfseries{Django + tailwind}} page with user authentication to access the database for demo purpose.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-    
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Dayananda Sagar Academy of Tech. and Mgmt.}{Bengaluru, KA}
-      {Bachelor of Electrical and Electronics Engineering - CGPA: 8.58}{Jul 2017 -- Jul 2021}
-  \resumeSubHeadingListEnd
+	%-----------EDUCATION-----------
+	\section{Education}
+	\resumeSubHeadingListStart \resumeSubheading
+	{Dayananda Sagar Academy of Tech. and Mgmt.}{Bengaluru, KA} {Bachelor of Electrical and Electronics Engineering - CGPA: 8.58}{Jul 2017 -- Jul 2021}
+	\resumeSubHeadingListEnd
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: {\bfseries{Python}}, 
-                          {\bfseries{SQL}}, 
-                          {\transparent{0.75}vb.NET}} \\
-     \textbf{Libraries}{: {\bfseries{Pandas}}, 
-                          {\bfseries{NumPy}},
-                          {\bfseries{Matplotlib}},
-                          {\bfseries{Seaborn}},
-                          {\bfseries{Scikit-learn}}}\\
-     \textbf{Frameworks}{: {\bfseries{Flask}},
-                          {\transparent{0.75}Django}},
-                          {\transparent{0.75}Bootstrap} \\
-     \textbf{Developer Tools}{: 
-                          {\bfseries{Git}},
-                          {\bfseries{VS Code}},
-                          {\bfseries{UiPath}}, 
-                          {\transparent{0.75}Docker}} \\
-    }}
- \end{itemize}
+	%-----------PROGRAMMING SKILLS-----------
+	\section{Technical Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\small{\item{ \textbf{Languages}{: {\textbf{Python}}, {\textbf{SQL}}, {\transparent{0.75}vb.NET}} \\ \textbf{Libraries}{: {\textbf{Pandas}}, {\textbf{NumPy}}, {\textbf{Matplotlib}}, {\textbf{Seaborn}}, {\textbf{Scikit-learn}}}\\ \textbf{Frameworks}{: {\textbf{Flask}}, {\transparent{0.75}Django}}, {\transparent{0.75}Bootstrap} \\ \textbf{Developer Tools}{: {\textbf{Git}}, {\textbf{VS Code}}, {\textbf{UiPath}}, {\transparent{0.75}Docker}} \\ }}
+	\end{itemize}
 
-%-----------Certification Courses-----------
-\section{Certifications}
- \begin{itemize}[leftmargin=0.15in, label={}]
-
-\begin{tabularx}{\linewidth}{ @{} X X X @{} }
-    \href{https://ineuron.ai/course/Full-Stack-Data-Science-Nov'21-Batch}
-    {\bfseries{Full Stack - Data Science}}\hfill \break
-    iNeuron.ai\hfill \break
-    {\textit{Nov, 2021 -- Present}}
-
-    &
-    
-    \href{https://drive.google.com/file/d/1nlAGjIDLMqbXyDVl-Py22eLMO2MyzlGz/view?usp=sharing}
-    {\bfseries{Deep Learning Specialization}}\hfill \break
-    deeplearning.ai\hfill \break
-    {\textit{Completed 4/5}}
-
-    &
-    
-    \href{https://www.coursera.org/learn/machine-learning}
-    {\bfseries{Machine Learning}}\hfill \break
-    Coursera
-\end{tabularx}
- \end{itemize}
-%-------------------------------------------
+	%-----------Certification Courses-----------
+	\section{Certifications}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\item { \begin{tabularx}{\linewidth}{ @{} X X X @{} } \href{https://ineuron.ai/course/Full-Stack-Data-Science-Nov'21-Batch}{\textbf{Full Stack - Data Science}}\hfill \break iNeuron.ai\hfill \break {\textit{Nov, 2021 -- Present}} & \href{https://drive.google.com/file/d/1nlAGjIDLMqbXyDVl-Py22eLMO2MyzlGz/view?usp=sharing}{\textbf{Deep Learning Specialization}}\hfill \break deeplearning.ai\hfill \break {\textit{Completed 4/5}} & \href{https://www.coursera.org/learn/machine-learning}{\textbf{Machine Learning}}\hfill \break Coursera\end{tabularx} }
+	\end{itemize}
+	%-------------------------------------------
 \end{document}
